@@ -20,6 +20,7 @@ import kr.co.songjava.mvc.service.BoardService;
 @RequestMapping("/board")
 public class Boardcontroller {
 	
+	
 	@Autowired
 	private BoardService service;
 	
