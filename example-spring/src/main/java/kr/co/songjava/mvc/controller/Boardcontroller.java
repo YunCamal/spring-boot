@@ -21,6 +21,7 @@ import kr.co.songjava.mvc.service.BoardService;
 public class Boardcontroller {
 	
 	
+	
 	@Autowired
 	private BoardService service;
 	
