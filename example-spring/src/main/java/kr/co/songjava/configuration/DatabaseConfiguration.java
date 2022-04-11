@@ -1,4 +1,4 @@
-package kr.co.configuration;
+package kr.co.songjava.configuration;
 
 import javax.sql.DataSource;
 
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class DatabaseConfiguration {
 	
 	@Bean
-	@ConfigurationProperties(prefix = "spring.datasource")
+	@ConfigurationProperties(prefix="spring.datasource")
 	public DataSource dataSource() {
 		return DataSourceBuilder.create().build();
 	}

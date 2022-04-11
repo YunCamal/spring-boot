@@ -23,7 +23,7 @@ public class Boardcontroller {
 	
 	
 	@Autowired
-	private BoardService service;
+	private BoardService boardService;
 	
 	/**
 	 * 리스트 처리
@@ -33,7 +33,7 @@ public class Boardcontroller {
 	 * */
 	@GetMapping
 	public List<Board> getList(){
-		return service.getList();
+		return boardService.getList();
 	}
 	
 	/**
@@ -42,9 +42,9 @@ public class Boardcontroller {
 	 * 
 	 * 
 	 * */
-	@GetMapping("/{boardSeq")
+	@GetMapping("/{boardSeq}")
 	public Board get(@PathVariable int boardSeq) {
-		return service.get(boardSeq);
+		return boardService.get(boardSeq);
 	}
 	
 	/**
@@ -55,7 +55,7 @@ public class Boardcontroller {
 	 * */
 	@GetMapping("/save")
 	public void save(Board board) {
-		service.save(board);
+		boardService.save(board);
 	}
 	
 
@@ -65,9 +65,9 @@ public class Boardcontroller {
 	 * 
 	 * 
 	 * */
-	@GetMapping("/delete{boardSeq")
+	@GetMapping("/delete/{boardSeq}")
 	public void delete(@PathVariable int boardSeq) {
-		service.delete(boardSeq);
+		boardService.delete(boardSeq);
 	}
 	
 }
